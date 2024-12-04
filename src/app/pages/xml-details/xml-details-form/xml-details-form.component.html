@@ -1,0 +1,16 @@
+<form>
+    <div class="d-flex justify-content-center">
+        <input
+          type="file"
+          #fileInput
+          (change)="onFileSelected($event)"
+          accept=".xml"
+          style="display: none">
+        <button 
+          class="border px-4 py-3 rounded-3"
+          (click)="fileInput.click()"
+          [disabled]="loading">
+          {{ loading ? 'Uploading...' : 'Importar XML' }}
+        </button>
+      </div>
+</form>

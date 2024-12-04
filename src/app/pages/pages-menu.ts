@@ -13,6 +13,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/auth',
   },
   {
+    title: 'xml-details',
+    icon: 'file-text-outline',
+    link: '/pages/xml-details',
+  },
+  {
     title: 'Not found',
     icon: 'close-circle-outline',
     link: '/pages/whatever',

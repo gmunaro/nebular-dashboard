@@ -20,6 +20,8 @@ import { ResponseInterceptor } from './@interceptors/response.interceptor';
 import { NbCustomTokenStorage } from './@core/utils.ts/customtokenstorage';
 import { CoreModule } from './@core/core.module';
 import { I18nModule } from './@i18n/i18n.module';
+import { CustomButtonComponent } from './shared/components/custom-button/custom-button.component';
+
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,7 +33,8 @@ function filterInterceptorRequest(req: HttpRequest<any>): boolean {
 }
 
 @NgModule({ declarations: [
-        AppComponent
+        AppComponent,
+        CustomButtonComponent
     ],
     bootstrap: [AppComponent], imports: [I18nModule,
         BrowserModule,

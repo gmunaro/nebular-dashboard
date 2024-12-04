@@ -1,0 +1,47 @@
+<nb-card>
+    
+    <nb-card-header>
+        Header
+    </nb-card-header>
+    
+    <nb-card-body>
+        <div class="row mt-5">
+            
+            <div class="col-6">
+                <XmlDetailsFormComponent>
+                </XmlDetailsFormComponent>
+            </div>
+            <div class="col-6">
+                            
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-item-start mb-2 border px-4 py-3 rounded-3"
+                        *ngFor="let Xd of service.list; let i = index"> <!-- Added 'let i = index' to track the index -->
+                        
+                        <div class="flex-grow-1">
+                            <div class="fw-bold">Id: {{ Xd.xmlId }}</div>
+                            <div class="fw-bold">Data: {{ Xd.dataXml }}</div>                            
+                            
+                            <div>
+                                Conteudo:
+                                <span *ngIf="!isExpanded(i)">{{ Xd.xmlContent | slice:0:10 }}...</span> <!-- Show truncated content -->
+                                <span *ngIf="isExpanded(i)">{{ Xd.xmlContent }}</span> <!-- Show full content -->
+                                <button (click)="toggleContent(i)" class="border px-2 py-1 rounded-3" >                                
+                                    {{ isExpanded(i) ? '-' : '+' }} 
+                                </button>
+                            </div>
+                          
+                            
+                        </div>
+                
+                        <span class="text-secondary icon-container">
+                            <nb-icon icon="trash-outline" class="fa-lg"></nb-icon>
+                        </span>   
+                    </li>
+                </ul>
+                
+        </div>
+    </div>
+    </nb-card-body>
+    
+</nb-card>
+

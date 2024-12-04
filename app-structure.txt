@@ -1,0 +1,19 @@
+src
+|
+|---App
+|    |---pages
+|    |   |
+|    |   |---xml-details
+|    |   |   |
+|    |   |   |---xml-details.component.ts|.html
+|    |   |   |---xml-details-form
+|    |   |       |---xml-details-form.component.ts|.html
+|    |   |---Shared
+|    |   |   |
+|    |   |   |---xml-details.service.ts
+|    |   |   |---xml-details.model.ts
+|    |   |
+|    |   |---app.module.ts
+|
+|---styles.css
+|---index.html

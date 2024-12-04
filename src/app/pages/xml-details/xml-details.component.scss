@@ -1,0 +1,22 @@
+/* Hover effect for the entire icon container */
+.icon-container:hover {
+    cursor: pointer; /* Shows a pointer cursor */
+    color: #dc3545; /* Changes text/icon color to red */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Specific styles for the icon itself */
+.icon-container:hover nb-icon {
+    transform: scale(1.2); /* Slightly enlarges the icon */
+    transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.content {
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent wrapping */
+    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+  }
+  
+  .collapsed {
+    height: 1.2em; /* Adjust this height to fit one line of text */
+  }

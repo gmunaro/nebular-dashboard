@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { NotFoundComponent } from '../@theme/components';
 import { HomeComponent } from './home/home.component';
+import { XmlDetailsComponent } from './xml-details/xml-details.component';
 
 const routes: Routes = [{
   path: '',
@@ -17,6 +18,10 @@ const routes: Routes = [{
     {
       path: 'home',
       component: HomeComponent
+    },
+    {
+      path: 'xml-details',
+      component: XmlDetailsComponent
     },
     {
       path: '**',
